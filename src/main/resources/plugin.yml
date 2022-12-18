@@ -1,0 +1,7 @@
+name: NewUHC
+version: 1.0.0
+main: io.github.esoccoli.NewUHC
+description: A UHC plugin for the newer versions of Minecraft
+authon: esoccoli
+website: https://github.com/esoccoli/NewUHC
+api-version: 1.19
