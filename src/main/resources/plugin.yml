@@ -2,6 +2,15 @@ name: NewUHC
 version: 1.0.0
 main: io.github.esoccoli.NewUHC
 description: A UHC plugin for the newer versions of Minecraft
-authon: esoccoli
+author: esoccoli
 website: https://github.com/esoccoli/NewUHC
 api-version: 1.19
+
+commands:
+    uhc:
+        description: UHC command
+        usage: /uhc <start|stop|join|leave|list|help>
+        aliases: [uhc]
+        permission: uhc.command
+        permission-message: You do not have permission to use this command
+        default: true

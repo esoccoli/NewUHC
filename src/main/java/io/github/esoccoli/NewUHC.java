@@ -12,6 +12,7 @@ public class NewUHC extends JavaPlugin
         // Plugin startup logic
         getLogger().info("NewUHC has been enabled!");
         getServer().getPluginManager().registerEvents(new EventListener(), this);
+        this.getCommand("uhc").setExecutor(new CommandUHC());
     }
 
     @Override
@@ -25,5 +26,5 @@ public class NewUHC extends JavaPlugin
         getLogger().info("NewUHC has been reloaded!");
     }
 
-    
+
 }
