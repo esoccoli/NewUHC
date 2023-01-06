@@ -14,55 +14,24 @@ public class CommandUHC implements CommandExecutor
         if (args.length == 0)
         {
             sender.sendMessage("Usage: /uhc <start|stop|join|leave|help>");
-            return true;
         }
-        else if (args[0].equalsIgnoreCase("start"))
+        switch (args[0].toLowerCase())
         {
-            sender.sendMessage("Starting UHC...");
-            return true;
+            case "start", "stop" -> sender.sendMessage(args[0].substring(0, 1).toUpperCase() + args[0].toLowerCase().substring(1) + "ing UHC...");
+
+            case "join", "leave" -> sender.sendMessage(sender instanceof Player ?
+                    args[0].substring(0, 1).toUpperCase() + args[0].toLowerCase().substring(1) + "ing UHC..."
+                    : "You must be a player to " + args[0].toLowerCase() + " a UHC!");
+
+            case "help" -> sender.sendMessage("Help: \n" +
+                            "/uhc start - Starts the UHC\n" +
+                            "/uhc stop - Stops the UHC\n" +
+                            "/uhc reload - Reloads the UHC\n" +
+                            "/uhc help - Shows this help message");
+
+            default -> sender.sendMessage("Usage: /uhc <start|stop|join|leave|help>");
         }
-        else if (args[0].equalsIgnoreCase("stop"))
-        {
-            sender.sendMessage("Stopping UHC...");
-            return true;
-        }
-        else if (args[0].equalsIgnoreCase("join"))
-        {
-            if (sender instanceof Player)
-            {
-                sender.sendMessage("Joining UHC...");
-            }
-            else
-            {
-                sender.sendMessage("You must be a player to join a UHC!");
-            }
-            return true;
-        }
-        else if (args[0].equalsIgnoreCase("leave"))
-        {
-            if (sender instanceof Player){
-                sender.sendMessage("Leaving UHC...");
-            }
-            else
-            {
-                sender.sendMessage("You must be a player to leave a UHC!");
-            }
-            return true;
-        }
-        else if (args[0].equalsIgnoreCase(("help")))
-        {
-            sender.sendMessage("Help:");
-            sender.sendMessage("/uhc start - Starts the UHC");
-            sender.sendMessage("/uhc stop - Stops the UHC");
-            sender.sendMessage("/uhc reload - Reloads the UHC");
-            sender.sendMessage("/uhc help - Shows this help message");
-            return true;
-        }
-        else
-        {
-            sender.sendMessage("Usage: /uhc <start|stop|join|leave|help>");
-            return true;
-        }
+        return true;
     }
 }
 

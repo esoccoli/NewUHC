@@ -12,7 +12,7 @@ public class EventListener implements Listener
     public void onEnableEvent(PluginEnableEvent event)
     {
         // Plugin startup logic
-        event.getPlugin().getLogger().info("NewUHC has been enabled!");
-        event.getPlugin().getLogger().info("Use /help to see all commands! (NYI)");
+        event.getPlugin().getLogger().info("NewUHC has been enabled!\n" +
+                "Use /help to see all commands! (NYI)");
     }
 }
