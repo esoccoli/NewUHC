@@ -1,5 +1,6 @@
 package io.github.esoccoli;
 
+import io.github.esoccoli.Items.ApprenticeHelmet;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
@@ -12,7 +13,11 @@ public class NewUHC extends JavaPlugin
         // Plugin startup logic
         getLogger().info("NewUHC has been enabled!");
         getServer().getPluginManager().registerEvents(new EventListener(), this);
-        this.getCommand("uhc").setExecutor(new CommandUHC());
+        this.getCommand("uhc").setExecutor(new UHCCommand());
+
+        // Register all items
+        ApprenticeHelmet.init();
+
     }
 
     @Override

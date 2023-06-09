@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class CommandUHC implements CommandExecutor
+public class UHCCommand implements CommandExecutor
 {
     @Override
     public boolean onCommand (@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args)
@@ -27,9 +27,12 @@ public class CommandUHC implements CommandExecutor
                             "/uhc start - Starts the UHC\n" +
                             "/uhc stop - Stops the UHC\n" +
                             "/uhc reload - Reloads the UHC\n" +
+                            "/uhc join - Joins the UHC\n" +
+                            "/uhc leave - Leaves the UHC\n" +
+                            "/uhc config - Opens the config menu for the current game\n" +
                             "/uhc help - Shows this help message");
 
-            default -> sender.sendMessage("Usage: /uhc <start|stop|join|leave|help>");
+            default -> sender.sendMessage("Usage: /uhc <start | stop | join | leave | config | help>");
         }
         return true;
     }

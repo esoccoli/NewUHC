@@ -13,6 +13,6 @@ public class EventListener implements Listener
     {
         // Plugin startup logic
         event.getPlugin().getLogger().info("NewUHC has been enabled!\n" +
-                "Use /help to see all commands! (NYI)");
+                "Use /uhc help to see all commands! (NYI)");
     }
 }
