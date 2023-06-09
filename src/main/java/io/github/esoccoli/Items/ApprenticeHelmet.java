@@ -16,8 +16,15 @@ public class ApprenticeHelmet
         createApprenticeHelmet();
     }
 
-    // Creates the Apprentice Helmet item
-    private static void createApprenticeHelmet(){
+    /**
+     * Creates a helmet with protection 1 on all types of damage
+     * <p>
+     * Crafted with 5 iron ingots and a redstone torch
+     * <p>
+     * This helmet is intended to be easy to craft and slightly better than
+     * a normal iron helmet
+     */
+    private static void createApprenticeHelmet() {
         ItemStack item = new ItemStack(Material.IRON_HELMET, 1);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName("Apprentice Helmet");
