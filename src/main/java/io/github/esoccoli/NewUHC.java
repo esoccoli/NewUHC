@@ -1,6 +1,6 @@
 package io.github.esoccoli;
 
-import io.github.esoccoli.Items.ApprenticeHelmet;
+import io.github.esoccoli.Items.*;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
@@ -17,6 +17,11 @@ public class NewUHC extends JavaPlugin
 
         // Register all items
         ApprenticeHelmet.init();
+        ApprenticeSword.init();
+        ApprenticeBow.init();
+        VorpalSword.init();
+        SharpnessBook.init();
+        PowerBook.init();
 
     }
 
