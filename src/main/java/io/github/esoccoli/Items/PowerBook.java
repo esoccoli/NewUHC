@@ -17,7 +17,7 @@ public class PowerBook
     }
 
     private static void createPowerBook() {
-        ItemStack item = new ItemStack(Material.BOOK, 1);
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK, 1);
 
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName("Book of Power");
@@ -31,7 +31,7 @@ public class PowerBook
         powerBook.shape("F  ", " PP", " PB");
         powerBook.setIngredient('F', Material.FLINT);
         powerBook.setIngredient('P', Material.PAPER);
-        powerBook.setIngredient('I', Material.BONE);
+        powerBook.setIngredient('B', Material.BONE);
 
         powerBook.setGroup("power_book");
 

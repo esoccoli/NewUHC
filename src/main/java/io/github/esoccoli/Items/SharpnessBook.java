@@ -17,7 +17,7 @@ public class SharpnessBook
     }
 
     private static void createSharpnessBook() {
-        ItemStack item = new ItemStack(Material.BOOK, 1);
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK, 1);
 
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName("Book of Sharpening");

@@ -22,7 +22,10 @@ public class NewUHC extends JavaPlugin
         VorpalSword.init();
         SharpnessBook.init();
         PowerBook.init();
-
+        DragonSword.init();
+        LeatherEconomy.init();
+        ProtectionBook.init();
+        ProjectileProtectionBook.init();
     }
 
     @Override

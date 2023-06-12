@@ -27,7 +27,7 @@ public class ApprenticeBow
     private static void createApprenticeBow() {
         ItemStack item = new ItemStack(Material.BOW, 1);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName("Apprentice Helmet");
+        meta.setDisplayName("Apprentice Bow");
         meta.addEnchant(Enchantment.ARROW_DAMAGE, 2, false);
 
         item.setItemMeta(meta);
