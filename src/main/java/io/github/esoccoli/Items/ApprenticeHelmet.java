@@ -37,22 +37,24 @@ public class ApprenticeHelmet
         apprenticeHelmet = item;
 
         // Creates the crafting recipe
-        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("apprentice_helmet"), item);
-        sr.shape("III", "ITI", "   ");
-        sr.setIngredient('I', Material.IRON_INGOT);
-        sr.setIngredient('T', Material.REDSTONE_TORCH);
-        Bukkit.getServer().addRecipe(sr);
+        ShapedRecipe app_helm_top = new ShapedRecipe(NamespacedKey.minecraft("apprentice_helmet_top"), item);
+        app_helm_top.shape("III", "ITI", "   ");
+        app_helm_top.setIngredient('I', Material.IRON_INGOT);
+        app_helm_top.setIngredient('T', Material.REDSTONE_TORCH);
+
 
         // Alternate recipe (so it works in the bottom part of the crafting table)
-        ShapedRecipe sr2 = new ShapedRecipe(NamespacedKey.minecraft("apprentice_helmet_alt"), item);
-        sr2.shape("   ", "III", "ITI");
-        sr2.setIngredient('I', Material.IRON_INGOT);
-        sr2.setIngredient('T', Material.REDSTONE_TORCH);
-        Bukkit.getServer().addRecipe(sr2);
+        ShapedRecipe app_helm_bottom = new ShapedRecipe(NamespacedKey.minecraft("apprentice_helmet_bottom"), item);
+        app_helm_bottom.shape("   ", "III", "ITI");
+        app_helm_bottom.setIngredient('I', Material.IRON_INGOT);
+        app_helm_bottom.setIngredient('T', Material.REDSTONE_TORCH);
 
-        sr.setGroup("apprentice_helmet");
-        sr2.setGroup("apprentice_helmet");
 
+        app_helm_top.setGroup("apprentice_helmet");
+        app_helm_bottom.setGroup("apprentice_helmet");
+
+        Bukkit.getServer().addRecipe(app_helm_top);
+        Bukkit.getServer().addRecipe(app_helm_bottom);
 
     }
 }

@@ -28,13 +28,21 @@ public class ProtectionBook
         item.setItemMeta(meta);
         protectionBook = item;
 
-        ShapedRecipe protectionBook = new ShapedRecipe(NamespacedKey.minecraft("protection_book"), item);
+        ShapedRecipe protectionBook = new ShapedRecipe(NamespacedKey.minecraft("protection_book_top"), item);
         protectionBook.shape("PP ", "PI ", "   ");
         protectionBook.setIngredient('P', Material.PAPER);
         protectionBook.setIngredient('I', Material.IRON_INGOT);
 
         protectionBook.setGroup("protection_book");
         Bukkit.getServer().addRecipe(protectionBook);
+
+        ShapedRecipe protectionBook_alt = new ShapedRecipe(NamespacedKey.minecraft("protection_book_bottom"), item);
+        protectionBook_alt.shape("   ", " PP", " PI");
+        protectionBook_alt.setIngredient('P', Material.PAPER);
+        protectionBook_alt.setIngredient('I', Material.IRON_INGOT);
+
+        protectionBook_alt.setGroup("protection_book");
+        Bukkit.getServer().addRecipe(protectionBook_alt);
 
     }
 }

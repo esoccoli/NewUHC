@@ -38,30 +38,31 @@ public class ApprenticeSword
         // Can be crafted in any of the 3 columns
 
         // Left column
-        ShapedRecipe leftColSR = new ShapedRecipe(NamespacedKey.minecraft("apprentice_sword_left"), item);
-        leftColSR.shape("R  ", "I  ", "R  ");
-        leftColSR.setIngredient('R', Material.REDSTONE_BLOCK);
-        leftColSR.setIngredient('I', Material.IRON_SWORD);
-        Bukkit.getServer().addRecipe(leftColSR);
+        ShapedRecipe app_sword_left = new ShapedRecipe(NamespacedKey.minecraft("apprentice_sword_left"), item);
+        app_sword_left.shape("R  ", "I  ", "R  ");
+        app_sword_left.setIngredient('R', Material.REDSTONE_BLOCK);
+        app_sword_left.setIngredient('I', Material.IRON_SWORD);
+
+        app_sword_left.setGroup("apprentice_sword");
+        Bukkit.getServer().addRecipe(app_sword_left);
 
         // Middle column
-        ShapedRecipe midColSR = new ShapedRecipe(NamespacedKey.minecraft("apprentice_sword_mid"), item);
+        ShapedRecipe app_sword_middle = new ShapedRecipe(NamespacedKey.minecraft("apprentice_sword_middle"), item);
 
-        midColSR.shape(" R ", " I ", " R ");
-        midColSR.setIngredient('R', Material.REDSTONE_BLOCK);
-        midColSR.setIngredient('I', Material.IRON_SWORD);
-        Bukkit.getServer().addRecipe(midColSR);
+        app_sword_middle.shape(" R ", " I ", " R ");
+        app_sword_middle.setIngredient('R', Material.REDSTONE_BLOCK);
+        app_sword_middle.setIngredient('I', Material.IRON_SWORD);
+
+        app_sword_middle.setGroup("apprentice_sword");
+        Bukkit.getServer().addRecipe(app_sword_middle);
 
         // Right column
-        ShapedRecipe rightColSR = new ShapedRecipe(NamespacedKey.minecraft("apprentice_sword_right"), item);
-        rightColSR.shape("  R", "  I", "  R");
-        rightColSR.setIngredient('R', Material.REDSTONE_BLOCK);
-        rightColSR.setIngredient('I', Material.IRON_SWORD);
-        Bukkit.getServer().addRecipe(rightColSR);
+        ShapedRecipe app_sword_right = new ShapedRecipe(NamespacedKey.minecraft("apprentice_sword_right"), item);
+        app_sword_right.shape("  R", "  I", "  R");
+        app_sword_right.setIngredient('R', Material.REDSTONE_BLOCK);
+        app_sword_right.setIngredient('I', Material.IRON_SWORD);
 
-        // Sets the group for all 3 recipes
-        leftColSR.setGroup("apprentice_sword");
-        midColSR.setGroup("apprentice_sword");
-        rightColSR.setGroup("apprentice_sword");
+        app_sword_right.setGroup("apprentice_sword");
+        Bukkit.getServer().addRecipe(app_sword_right);
     }
 }

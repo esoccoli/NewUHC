@@ -34,10 +34,12 @@ public class ApprenticeBow
         apprenticeBow = item;
 
         // Creates the crafting recipe
-        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("apprentice_bow"), item);
-        sr.shape(" RS", "R S", " RS");
-        sr.setIngredient('S', Material.STRING);
-        sr.setIngredient('R', Material.REDSTONE_TORCH);
-        Bukkit.getServer().addRecipe(sr);
+        ShapedRecipe apprentice_bow = new ShapedRecipe(NamespacedKey.minecraft("apprentice_bow"), item);
+        apprentice_bow.shape(" RS", "R S", " RS");
+        apprentice_bow.setIngredient('S', Material.STRING);
+        apprentice_bow.setIngredient('R', Material.REDSTONE_TORCH);
+
+        apprentice_bow.setGroup("apprentice_bow");
+        Bukkit.getServer().addRecipe(apprentice_bow);
     }
 }

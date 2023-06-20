@@ -33,7 +33,7 @@ public class DragonSword
         dragonSword = item;
 
         // Creates the crafting recipe
-        ShapedRecipe sword = new ShapedRecipe(NamespacedKey.minecraft("drag_sword"), item);
+        ShapedRecipe sword = new ShapedRecipe(NamespacedKey.minecraft("dragon_sword"), item);
         sword.shape(" B ", " D ", "OBO");
         sword.setIngredient('B', Material.BLAZE_POWDER);
         sword.setIngredient('D', Material.DIAMOND_SWORD);
